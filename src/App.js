@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -54,46 +54,17 @@ function App() {
         className="searchBar"
       />
 
-      <div
-        style={{
-          gap: "18px",
-          marginTop: "25px",
-          marginBottom: "25px",
-          display: "flex",
-          "flex-wrap": "wrap",
-          justifyContent: "center",
-        }}
-      >
+      <div className="countriesGrid">
         {filtered.length > 0 ? (
           filtered.map((country) => (
-            <div
-              key={country.common}
-              style={{
-                gap: "4px",
-                height: "auto",
-                width: "175px",
-                display: "flex",
-                "flex-direction": "column",
-                "align-items": "center",
-                "border-radius": "8px",
-                border: "1px solid #E4E4E4",
-                "box-shadow": "0 3px 5px rgba(0, 0, 0, 0.1)",
-              }}
-            >
+            <div key={country.common} className="countryCard">
               <img
                 src={country.png}
+                className="countryFlag"
                 alt={`Flag of ${country.common}`}
-                style={{
-                  width: "85px",
-                  height: "85px",
-                  paddingTop: "12px",
-                  borderRadius: "5px",
-                }}
               />
 
-              <h3 style={{ paddingLeft: "6px", paddingRight: "6px" }}>
-                {country.common}
-              </h3>
+              <h3>{country.common}</h3>
             </div>
           ))
         ) : (

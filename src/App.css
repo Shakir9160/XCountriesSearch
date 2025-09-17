@@ -18,3 +18,36 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+
+.countriesGrid {
+  gap: 18px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.countryCard {
+  gap: 4px;
+  height: auto;
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.countryFlag {
+  width: 85px;
+  height: 85px;
+  padding-top: 12px;
+  border-radius: 5px;
+}
+
+.countryCard h3 {
+  padding-left: 6px;
+  padding-right: 6px;
+}
